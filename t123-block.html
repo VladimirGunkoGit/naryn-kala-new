@@ -1,0 +1,555 @@
+<!-- nominify begin --> <!-- ROSTER landing for Tilda T123 / generated 2026-06-01 --> <style>
+:root{
+  --graphite:#15171A;
+  --bone:#F5F5F5;
+  --ash:#6E7176;
+  --orange:#FF5A45;
+  --cobalt:#5B2A9D;
+  --error:#FF3D3D;
+  --line:#1F2125;
+  --line-2:#2A2C30;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:72px}
+
+/* ============ CS-style crosshair cursor ============ */
+html, body, a, button, [role="button"], summary, label, .btn, .topbar-cta, .faq-item summary{
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g stroke='%23FF5A45' stroke-width='1.5' stroke-linecap='square'><line x1='16' y1='4' x2='16' y2='12'/><line x1='16' y1='20' x2='16' y2='28'/><line x1='4' y1='16' x2='12' y2='16'/><line x1='20' y1='16' x2='28' y2='16'/></g></svg>") 16 16, crosshair;
+}
+input, textarea, select{cursor:text}
+body{
+  background:var(--carbon);
+  color:var(--bone);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--orange);color:var(--carbon)}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+.h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(54px,8.6vw,84px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.h2{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(40px,5.8vw,52px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:22px;line-height:1;letter-spacing:-.01em;text-transform:uppercase}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.lead{font-size:18px;line-height:1.55;color:#C9CBCF;max-width:620px}
+.body{font-size:15px;line-height:1.65;color:#C9CBCF}
+
+section{padding:96px 0;border-bottom:1px solid var(--line);position:relative}
+@media(min-width:1024px){section{padding:120px 0}}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;color:var(--ash);margin-bottom:32px}
+.sec-tag .num{color:var(--orange)}
+.sec-tag .caret{display:inline-block;width:8px;height:13px;background:var(--orange);animation:caret 1.05s steps(2) infinite;margin-left:4px}
+@keyframes caret{50%{opacity:0}}
+
+/* ===== TOPBAR ===== */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,12,14,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 32px;max-width:var(--maxw);margin:0 auto;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:22px;height:22px;background:var(--orange);position:relative;flex-shrink:0}
+.brand-mark::before{content:"";position:absolute;inset:4px;background:var(--carbon)}
+.brand-mark::after{content:"";position:absolute;left:7px;top:7px;width:8px;height:8px;background:var(--orange)}
+.brand-name{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.08em}
+.nav{display:none;gap:24px}
+@media(min-width:900px){.nav{display:flex}}
+.nav a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);transition:color .2s}
+.nav a:hover{color:var(--bone)}
+.topbar-cta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;background:var(--cobalt);color:var(--bone);font-weight:500;flex-shrink:0;transition:transform .2s,background .2s,color .2s}
+.topbar-cta:hover{transform:translateX(2px);background:var(--carbon);color:var(--cobalt);outline:1px solid var(--cobalt)}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;transition:transform .2s,background .2s,color .2s,border-color .2s,outline-color .2s;border-radius:0}
+.btn-primary{background:var(--cobalt);color:var(--bone);font-weight:800}
+.btn-primary:hover{transform:translateX(2px);background:var(--carbon);color:var(--cobalt);outline:1px solid var(--cobalt)}
+.btn-secondary{background:transparent;border:1px solid var(--cobalt);color:var(--cobalt)}
+.btn-secondary:hover{background:var(--cobalt);color:var(--bone)}
+.btn .arrow{display:inline-block;transition:transform .2s}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* ===== HERO ===== */
+.hero{padding:140px 0 120px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:1024px){.hero-grid{grid-template-columns:7fr 5fr;gap:48px}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px 24px;color:var(--ash);margin-bottom:36px}
+.hero-meta .pill{display:inline-flex;align-items:center;gap:8px}
+.hero-meta .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1 .accent{color:var(--orange)}
+.hero p.lead{margin-top:24px}
+.hero-ctas{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* ===== PHOTO FRAME (универсальная рамка для фото) ===== */
+.photo-frame{position:relative;width:100%;background:var(--graphite);border-top:5px solid var(--orange);overflow:hidden}
+.photo-frame::before{content:"";position:absolute;left:0;top:0;width:14px;height:14px;background:var(--orange);z-index:3;animation:drift-or 4s ease-in-out infinite}
+.photo-frame::after{content:"";position:absolute;right:0;bottom:0;width:14px;height:14px;background:var(--cobalt);z-index:3;animation:drift-co 4.5s ease-in-out infinite}
+@keyframes drift-or{0%,100%{transform:translate(0,0)}50%{transform:translate(2px,-2px)}}
+@keyframes drift-co{0%,100%{transform:translate(0,0)}50%{transform:translate(-2px,2px)}}
+.photo-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.92) contrast(1.04)}
+.photo-frame .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,12,14,.55));z-index:1;pointer-events:none}
+.photo-frame .scanline{position:absolute;left:0;right:0;top:0;height:2px;background:var(--orange);opacity:.55;z-index:2;animation:scanline 7s linear infinite;mix-blend-mode:screen}
+@keyframes scanline{0%{transform:translateY(0)}100%{transform:translateY(100%)}}
+.photo-frame .photo-tag-l{position:absolute;left:14px;bottom:14px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);z-index:3}
+.photo-frame .photo-tag-r{position:absolute;right:14px;top:14px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);z-index:3}
+
+/* hero-фото — высокая обёртка с параллаксом */
+.hero-photo{aspect-ratio:1/1.05;max-width:440px;margin:0 auto;transition:transform .25s ease-out;will-change:transform}
+@media(hover:none){.hero-photo{transition:none}}
+
+/* ===== TRAININGS (как было) ===== */
+.trainings{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:768px){.trainings{grid-template-columns:repeat(3,1fr)}}
+.t-card{background:var(--graphite);padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-height:220px;transition:background .2s;position:relative;overflow:hidden}
+.t-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out}
+.t-card:hover{background:#181A1E;transform:translateY(-2px)}
+.t-card:hover::after{transform:scaleX(1)}
+.t-card .num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.t-card .title{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(24px,4.4vw,28px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+.t-card .desc{font-size:14px;line-height:1.6;color:#C9CBCF;margin-top:auto;padding-top:18px;border-top:1px solid var(--line-2)}
+.t-card .big{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:34px;line-height:1;color:var(--bone);letter-spacing:-.02em}
+
+/* ===== FIT (как было) ===== */
+.fit{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:640px){.fit{grid-template-columns:repeat(3,1fr)}}
+.fit-item{background:var(--graphite);padding:28px;display:flex;flex-direction:column;gap:10px;min-height:160px;transition:background .2s,transform .2s;position:relative;overflow:hidden}
+.fit-item::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out}
+.fit-item:hover{background:#181A1E;transform:translateY(-2px)}
+.fit-item:hover::after{transform:scaleX(1)}
+.fit-item .num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.fit-item h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(22px,4vw,26px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+.fit-item p{font-size:14px;line-height:1.6;color:#C9CBCF}
+
+/* ===== GEO (Откуда играем) ===== */
+.geo-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-top:48px;align-items:stretch}
+@media(min-width:1024px){.geo-grid{grid-template-columns:4fr 8fr;gap:48px}}
+.geo-photo{position:relative;aspect-ratio:1/1.4;max-width:380px;width:100%;margin:0 auto}
+.geo-photo img{object-position:center 20%}
+.geo-cards{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);align-content:start}
+@media(min-width:640px){.geo-cards{grid-template-columns:1fr 1fr}}
+.geo-card{background:var(--graphite);padding:28px;display:flex;flex-direction:column;gap:10px;min-height:160px;position:relative;overflow:hidden;transition:background .2s,transform .2s}
+.geo-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out}
+.geo-card:hover{background:#181A1E;transform:translateY(-2px)}
+.geo-card:hover::after{transform:scaleX(1)}
+.geo-card .num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.geo-card h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(22px,4vw,26px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+.geo-card p{font-size:14px;line-height:1.6;color:#C9CBCF}
+.geo-card.span2{grid-column:1/-1;background:var(--graphite)}
+.geo-balance{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
+@media(min-width:640px){.geo-balance:not(.geo-balance--single){grid-template-columns:1fr 1fr}}
+.geo-balance .balance-cell{background:var(--graphite);padding:24px}
+.geo-balance .balance-cell .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.geo-balance .balance-cell.cobalt .tag{color:var(--cobalt)}
+.geo-balance .balance-cell.orange .tag{color:var(--orange)}
+.geo-balance .balance-cell h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(22px,4vw,26px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;margin-bottom:10px;color:var(--bone)}
+.geo-balance .balance-cell p{font-size:14px;line-height:1.6;color:var(--bone)}
+
+/* ===== RESP (Ответственность) ===== */
+.resp{display:grid;grid-template-columns:1fr;gap:32px;align-items:start;margin-top:48px}
+@media(min-width:1024px){.resp{grid-template-columns:5fr 7fr;gap:64px}}
+.resp-photo{aspect-ratio:1/1;max-width:440px;width:100%}
+.resp-bubble{position:absolute;top:24px;right:-12px;background:var(--orange);color:var(--carbon);padding:14px 18px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;max-width:240px;z-index:4}
+.resp-bubble::after{content:"";position:absolute;bottom:-8px;left:24px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid var(--orange)}
+.resp-text p{font-size:16px;line-height:1.7;color:#C9CBCF;margin-bottom:18px}
+.resp-text p:last-child{margin-bottom:0}
+.resp-text strong{color:var(--bone);font-weight:500}
+
+/* ===== RESERVE (как было) ===== */
+.reserve-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:48px;align-items:start}
+@media(min-width:1024px){.reserve-grid{grid-template-columns:5fr 7fr;gap:64px}}
+.reserve-intro p{font-size:16px;line-height:1.7;color:#C9CBCF;margin-bottom:18px}
+.reserve-intro p:last-child{margin-bottom:0}
+.reserve-steps{display:flex;flex-direction:column}
+.r-step{display:grid;grid-template-columns:60px 1fr;padding:24px 0;border-bottom:1px solid var(--line);gap:16px;align-items:start}
+.r-step:first-child{padding-top:0}
+.r-step:last-child{border-bottom:0}
+.r-step .num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange);padding-top:4px}
+.r-step h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(20px,3.6vw,22px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.15;margin-bottom:6px}
+.r-step p{color:#C9CBCF;font-size:14px;line-height:1.6}
+.reserve-balance{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
+@media(min-width:640px){.reserve-balance{grid-template-columns:1fr 1fr}}
+.balance-cell{background:var(--graphite);padding:24px}
+.balance-cell .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.balance-cell.minus .tag{color:var(--cobalt)}
+.balance-cell.plus .tag{color:var(--orange)}
+.balance-cell.cobalt .tag{color:var(--cobalt)}
+.balance-cell.orange .tag{color:var(--orange)}
+.balance-cell p{font-size:14px;line-height:1.6;color:var(--bone)}
+
+/* ===== PRICING ===== */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:768px){.pricing-grid{grid-template-columns:1fr 1fr}}
+.pricing-card{background:var(--graphite);padding:36px 32px;position:relative}
+.pricing-card--orange{border-top:5px solid var(--orange)}
+.pricing-card--cobalt{border-top:5px solid var(--cobalt)}
+.pricing-card::before{content:"";position:absolute;left:0;top:0;width:14px;height:14px;animation:drift-or 4s ease-in-out infinite}
+.pricing-card--orange::before{background:var(--orange)}
+.pricing-card--cobalt::before{background:var(--cobalt)}
+.pricing-card::after{content:"";position:absolute;right:0;bottom:0;width:14px;height:14px;animation:drift-co 4.5s ease-in-out infinite}
+.pricing-card--orange::after{background:var(--cobalt)}
+.pricing-card--cobalt::after{background:var(--orange)}
+.pricing-card .price{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:72px;line-height:1;letter-spacing:-.02em;margin-bottom:8px}
+.pricing-card--orange .price{color:var(--orange)}
+.pricing-card--cobalt .price{color:var(--cobalt)}
+.pricing-card .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:24px}
+.pricing-card .meta{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--bone);line-height:1.7;border-top:1px solid var(--line-2);padding-top:18px}
+.pricing-card .meta b{font-weight:500;display:block;margin-bottom:6px;letter-spacing:.12em;text-transform:uppercase}
+.pricing-card--orange .meta b{color:var(--orange)}
+.pricing-card--cobalt .meta b{color:var(--cobalt)}
+.pricing-note{margin-top:28px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash)}
+.pricing-note a{color:var(--orange);transition:color .2s}
+.pricing-note a:hover{color:var(--bone)}
+
+/* ===== SELECTION (Как проходит отбор) ===== */
+.sel-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:48px;align-items:start}
+
+/* ===== FAQ ===== */
+.faq-head{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+.faq-avatar{width:56px;height:56px;background:var(--graphite);position:relative;flex-shrink:0;border-top:3px solid var(--orange);overflow:hidden}
+.faq-avatar::before{content:"";position:absolute;left:0;top:0;width:8px;height:8px;background:var(--orange);z-index:2}
+.faq-avatar::after{content:"";position:absolute;right:0;bottom:0;width:8px;height:8px;background:var(--cobalt);z-index:2}
+.faq-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line);padding:0}
+.faq-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:60px 1fr 30px;align-items:center;padding:24px 0;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-q-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.faq-q{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(20px,3.6vw,22px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.15}
+.faq-toggle{justify-self:end;width:20px;height:20px;position:relative;transition:transform .25s}
+.faq-toggle::before,.faq-toggle::after{content:"";position:absolute;background:var(--orange);left:50%;top:50%;transform:translate(-50%,-50%)}
+.faq-toggle::before{width:14px;height:2px}
+.faq-toggle::after{width:2px;height:14px;transition:transform .25s}
+.faq-item[open] .faq-toggle::after{transform:translate(-50%,-50%) scaleY(0)}
+.faq-a{padding:0 0 28px 76px;color:#C9CBCF;font-size:15px;line-height:1.7;max-width:780px}
+@media(max-width:640px){.faq-item summary{grid-template-columns:42px 1fr 24px}.faq-a{padding-left:42px}}
+
+/* ===== CONTACTS ===== */
+.contacts{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:768px){.contacts{grid-template-columns:1fr 1fr}}
+.contact-cell{background:var(--graphite);padding:32px;display:flex;flex-direction:column;gap:10px}
+.contact-cell .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+.contact-cell .value{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:28px;letter-spacing:-.01em;line-height:1;color:var(--bone);transition:color .2s}
+.contact-cell a.value:hover{color:var(--orange)}
+.contact-cell.cobalt{border-top:3px solid var(--cobalt)}
+.contact-cell.orange{border-top:3px solid var(--orange)}
+
+/* ===== APPLY / FORM ===== */
+.apply-intro{margin-top:20px}
+.apply-form{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:768px){.apply-form{grid-template-columns:1fr 1fr}}
+.form-field{background:var(--graphite);padding:24px 28px;display:flex;flex-direction:column;gap:8px;position:relative}
+.form-field .field-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.form-field label{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;color:var(--bone);line-height:1}
+.form-field input{background:transparent;border:0;border-bottom:1px solid var(--line-2);padding:10px 0;color:var(--bone);font-size:16px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;min-width:0}
+.form-field input::placeholder{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ash);letter-spacing:0}
+.form-field input:focus{border-bottom-color:var(--orange)}
+.form-field input:invalid:not(:placeholder-shown){border-bottom-color:var(--error)}
+.form-field .hint{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-top:4px}
+.form-field .hint.accent{color:var(--orange)}
+.form-field .err{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--error);margin-top:4px;display:none}
+.form-field.has-error .err{display:block}
+.form-field.has-error input{border-bottom-color:var(--error)}
+.form-honeypot{position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0;pointer-events:none}
+.apply-actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.apply-actions .form-status{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+.apply-actions .form-status.is-error{color:var(--error)}
+.apply-actions .form-status a{color:var(--cobalt);text-decoration:underline;text-underline-offset:2px;transition:color .2s}
+.apply-actions .form-status a:hover{color:var(--bone)}
+.apply-foot{margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--ash);line-height:1.7}
+.apply-foot a{color:var(--bone);transition:color .2s}
+.apply-foot a:hover{color:var(--orange)}
+.apply-form-wrap.is-sent .apply-form,
+.apply-form-wrap.is-sent .apply-actions,
+.apply-form-wrap.is-sent .apply-foot{display:none}
+.thank-you{display:none;background:var(--graphite);border-top:5px solid var(--orange);padding:48px 32px;position:relative;margin-top:48px}
+.thank-you::before{content:"";position:absolute;left:0;top:0;width:14px;height:14px;background:var(--orange);animation:drift-or 4s ease-in-out infinite}
+.thank-you::after{content:"";position:absolute;right:0;bottom:0;width:14px;height:14px;background:var(--cobalt);animation:drift-co 4.5s ease-in-out infinite}
+.apply-form-wrap.is-sent .thank-you{display:block}
+.thank-you .ty-status{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.thank-you h3{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(28px,5vw,40px);text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin-bottom:20px}
+.thank-you p{font-size:16px;line-height:1.7;color:#C9CBCF;max-width:560px;margin-bottom:14px}
+.thank-you p:last-of-type{margin-bottom:0}
+.thank-you ol{counter-reset:s;list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:14px;max-width:560px}
+.thank-you ol li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;font-size:15px;line-height:1.55;color:#C9CBCF}
+.thank-you ol li::before{content:"/ 0" counter(s);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--orange);padding-top:3px}
+
+/* ===== INFO GRID (под формой / расписание) ===== */
+.info-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:768px){.info-grid{grid-template-columns:repeat(3,1fr)}}
+.info-block{background:var(--graphite);padding:28px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#C9CBCF;line-height:1.85}
+.info-block strong{color:var(--orange);font-weight:500;display:block;margin-bottom:12px;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.info-block a{color:var(--cobalt);transition:color .2s}
+.info-block a:hover{color:var(--bone)}
+
+/* ===== FOOTER ===== */
+footer{padding:64px 0 32px;border-bottom:0}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:start}
+.foot-block h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:14px}
+.foot-block a{display:block;font-size:14px;line-height:1.9;color:var(--bone);transition:color .2s}
+.foot-block a:hover{color:var(--orange)}
+.foot-block p{font-size:14px;line-height:1.65;color:#C9CBCF;max-width:380px}
+.foot-meta{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--ash);flex-wrap:wrap;gap:12px}
+.foot-meta a.credit{color:var(--bone);transition:color .2s;display:inline}
+.foot-meta a.credit:hover{color:var(--orange)}
+
+/* ===== ANIMATIONS / FX ===== */
+.reveal,.fx-text,.fx-card{opacity:0;transform:translateY(12px);transition:opacity .4s cubic-bezier(0.22,1,0.36,1),transform .4s cubic-bezier(0.22,1,0.36,1)}
+.fx-text{transform:translateY(8px);transition-duration:.35s}
+.fx-card{transition-duration:.4s}
+.fx-slide-left{opacity:0;transform:translateX(-32px);transition:opacity .5s cubic-bezier(0.22,1,0.36,1),transform .5s cubic-bezier(0.22,1,0.36,1)}
+.fx-slide-right{opacity:0;transform:translateX(32px);transition:opacity .5s cubic-bezier(0.22,1,0.36,1),transform .5s cubic-bezier(0.22,1,0.36,1)}
+.fx-grow-x{transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in,.fx-text.in,.fx-card.in,.fx-slide-left.in,.fx-slide-right.in{opacity:1;transform:none}
+.fx-grow-x.in{transform:scaleX(1)}
+
+@media(max-width:640px){
+  .container{padding:0 20px}
+  section{padding:64px 0}
+  .hero{padding:100px 0 64px}
+  .topbar-inner{padding:0 20px}
+  .nav{display:none}
+}
+
+@media(prefers-reduced-motion: reduce){
+  .reveal,.fx-text,.fx-card,.fx-slide-left,.fx-slide-right,.fx-grow-x{opacity:1!important;transform:none!important;transition:none!important}
+  .photo-frame::before,.photo-frame::after,.pricing-card::before,.pricing-card::after,.thank-you::before,.thank-you::after{animation:none}
+  .photo-frame .scanline{display:none}
+  .hero-meta .dot{animation:none}
+  .sec-tag .caret{animation:none}
+}
+</style> <header class="topbar"> <div class="topbar-inner"> <a class="brand" href="#hero"> <div class="brand-mark"></div> <span class="brand-name">ROSTER</span> </a> <nav class="nav"> <a href="#how">Как устроено</a> <a href="#manifest">Манифест</a> <a href="#geo">Откуда играем</a> <a href="#trial">Пробный урок</a> <a href="#faq">FAQ</a> <a href="#contacts">Контакты</a> </nav> <a href="#apply" class="topbar-cta">Записаться →</a> </div> </header> <main> <!-- ============ HERO ============ --> <section class="hero" id="hero"> <div class="container"> <div class="hero-meta mono fx-text"> <span class="pill"><span class="dot"></span>пн / ср / пт / онлайн / Discord</span> </div> <div class="hero-grid"> <div class="hero-text"> <h1 class="h1 fx-text">Собираем <span class="accent">женскую команду</span><br>для тренировок по Counter-Strike</h1> <p class="lead fx-text">Для игроков любого уровня FACEIT или Premier. Тренировки три раза в неделю онлайн в Discord. От 390 ₽ за урок.</p> <div class="hero-ctas fx-text"> <a href="#apply" class="btn btn-primary">Записаться <span class="arrow">→</span></a> <a href="#how" class="btn btn-secondary">Как устроено</a> </div> </div> <div class="hero-photo photo-frame fx-slide-right" id="hero-photo"> <img src="https://static.tildacdn.com/tild3936-3366-4662-b237-663336353838/hero.png" alt="Маскот школы CS2 — оперативник в чёрной шапке и тёмных очках"> <div class="overlay"></div> <div class="scanline"></div> <span class="photo-tag-r">ROSTER</span> <span class="photo-tag-l">// ROSTER</span> </div> </div> </div> </section> <!-- ============ 01 / МАНИФЕСТ ============ --> <section id="manifest"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 01</span><span>—</span><span>манифест</span><span class="caret"></span></div> <h2 class="h2 fx-text">Манифест</h2> <p class="mono fx-text" style="color:var(--ash);margin:14px 0 26px;letter-spacing:.08em;text-transform:none">без лишнего пафоса — почему мы собираем женские группы</p> <p class="lead fx-text">Мы устали от сексизма на серверах Counter-Strike и от токсичных тиммейтов, которые превращают игру в стресс. Поэтому собираем женские группы — пространство, где спокойно и уютно, где можно играть в удовольствие и расти, без агрессии и без необходимости кому-то что-то доказывать.</p> </div> </section> <!-- ============ 02 / КАК УСТРОЕНО ============ --> <section id="how"> <div class="container"> <h2 class="h2 fx-text">Как проходят занятия</h2> <div class="trainings fx-card-stagger"> <article class="t-card fx-card"> <div class="num">01 / время</div> <h3 class="title">Понедельник, среда, пятница</h3> <div class="big">18:00</div> <p class="desc">Время по Москве, Киеву, Риге и т.д.</p> </article> <article class="t-card fx-card"> <div class="num">02 / формат</div> <h3 class="title">Онлайн в Discord</h3> <p class="desc" style="margin-top:auto;border:0;padding:0;color:#C9CBCF">Голосовой канал, разбор демо, спарринги. Камера не нужна — микрофон обязателен.</p> </article> <article class="t-card fx-card"> <div class="num">03 / стоимость</div> <h3 class="title">От 390 ₽</h3> <div class="big">за урок</div> <p class="desc">Пакеты от 6 занятий. Перед первым пакетом — бесплатный пробный урок.</p> </article> </div> </div> </section> <!-- ============ 03 / ОТКУДА ИГРАЕМ ============ --> <section id="geo"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 02</span><span>—</span><span>язык и география</span><span class="caret"></span></div> <h2 class="h2 fx-text">Любые города и страны</h2> <div class="geo-grid"> <div class="geo-photo photo-frame fx-slide-left"> <img src="https://static.tildacdn.com/tild3635-6261-4131-b036-663665616264/geo.png" alt="Оперативник школы CS2 в полный рост"> <div class="overlay"></div> <div class="scanline"></div> <span class="photo-tag-r">field</span> <span class="photo-tag-l">// any country</span> </div> <div> <div class="geo-cards fx-card-stagger"> <article class="geo-card fx-card"> <div class="num">/ 01 / язык</div> <h3>Язык общения — русский</h3> <p>Тренировки, разборы, голос в Discord — на русском. Английский знать не обязательно.</p> </article> <article class="geo-card fx-card"> <div class="num">/ 02 / география</div> <h3>Страна не важна</h3> <p>Принимаем игроков откуда угодно. Не важно, где ты живёшь и с какой территории играешь. Сервер под группу подберём — чтобы всем было комфортно по пингу.</p> </article> </div> </div> </div> </div> </section> <!-- ============ 04 / ДИСЦИПЛИНА ============ --> <section id="responsibility"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 03</span><span>—</span><span>дисциплина</span><span class="caret"></span></div> <h2 class="h2 fx-text">Группа держится<br>на каждой</h2> <div class="resp"> <div class="resp-photo photo-frame fx-slide-left"> <div class="resp-bubble">подвела группу.</div> <img src="https://static.tildacdn.com/tild6662-3065-4631-b431-313361313662/resp.png" alt="Крупный портрет оперативника — собранный взгляд"> <div class="overlay"></div> <div class="scanline"></div> <span class="photo-tag-r">// дисциплина</span> <span class="photo-tag-l">// no excuses</span> </div> <div class="resp-text fx-text"> <p>В группе обычно 4–5 человек. <strong>Пропустила занятие — подвела группу.</strong> Мы разбираем тактики вместе, в спарринги выходим командой — без тебя темп падает.</p> <p>Если знаешь, что не сможешь приходить регулярно, — лучше не бери пакет 12 занятий. Пакет 6 даёт пространство для гибкости. О единичных пропусках всегда договариваемся индивидуально.</p> </div> </div> </div> </section> <!-- ============ 06 / СТОИМОСТЬ ============ --> <section id="pricing"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 04</span><span>—</span><span>стоимость</span><span class="caret"></span></div> <h2 class="h2 fx-text">Стоимость</h2> <div class="pricing-grid"> <div class="pricing-card pricing-card--orange fx-card"> <div class="price">390 ₽</div> <div class="label">// за урок</div> <div class="meta"> <b>// пакет 12 занятий</b>
+            регулярные тренировки<br>
+            прогресс заметнее<br>
+            лучшая цена за урок
+          </div> </div> <div class="pricing-card pricing-card--cobalt fx-card"> <div class="price">490 ₽</div> <div class="label">// за урок</div> <div class="meta"> <b>// пакет 6 занятий</b>
+            попробовать формат<br>
+            месяц без длинного<br>
+            обязательства
+          </div> </div> </div> <p class="pricing-note mono fx-text">// перед первым пакетом — <a href="#trial">бесплатный пробный урок</a></p> </div> </section> <!-- ============ 07 / ПРОБНЫЙ УРОК ============ --> <section id="trial"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 05</span><span>—</span><span>пробный урок</span><span class="caret"></span></div> <h2 class="h2 fx-text">Пробный урок</h2> <p class="lead fx-text" style="margin-top:20px">Прежде чем брать пакет — приходи на бесплатное занятие. Посмотришь, как устроена тренировка, и решишь, твой формат или нет. Никаких обязательств.</p> <div class="sel-grid"> <div class="reserve-steps fx-card-stagger"> <div class="r-step fx-card"> <div class="num">/ 01</div> <div> <h3>Запись</h3> <p>Записываешься на ближайший четверг через форму ниже или напрямую в Telegram. Я подтверждаю место.</p> </div> </div> <div class="r-step fx-card"> <div class="num">/ 02</div> <div> <h3>Занятие</h3> <p>Четверг, 18:00 МСК, онлайн в Discord. Час разбираем тактики, играем спарринг, отвечаем на твои вопросы. Полноценная тренировка, не урезанная демо-версия.</p> </div> </div> <div class="r-step fx-card"> <div class="num">/ 03</div> <div> <h3>Решение</h3> <p>Если нравится формат — выбираешь пакет 6 или 12 занятий. Если нет — ок, разошлись без обязательств и неловкости.</p> </div> </div> </div> </div> <div class="geo-balance geo-balance--single"> <div class="balance-cell orange fx-card"> <div class="tag">// важно</div> <h3>4 места на четверг</h3> <p>Записываемся в порядке очереди. Если все слоты заняты — ставлю в следующий четверг, обычно ждать неделю максимум.</p> </div> </div> </div> </section> <!-- ============ 08 / FAQ ============ --> <section id="faq"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 06</span><span>—</span><span>faq</span><span class="caret"></span></div> <div class="faq-head fx-text"> <div class="faq-avatar"> <img src="https://static.tildacdn.com/tild3738-3562-4337-b031-646135636461/faq-avatar.png" alt="Маскот школы CS2"> </div> <h2 class="h2">Вопросы, которые<br>задают чаще всего</h2> </div> <div class="faq-list"> <details class="faq-item fx-card" open> <summary> <span class="faq-q-num">Q.01</span> <span class="faq-q">Что происходит на тренировках?</span> <span class="faq-toggle"></span> </summary> <p class="faq-a">Разбираем матчи, играем спарринги, работаем над раскидками и командной игрой. Тренер ведёт занятие в голосовом канале Discord.</p> </details> <details class="faq-item fx-card"> <summary> <span class="faq-q-num">Q.02</span> <span class="faq-q">Я только начинаю играть командно. Подойдёт?</span> <span class="faq-toggle"></span> </summary> <p class="faq-a">Мы берём игроков любого уровня. Командной игре научим — для этого школа и существует.</p> </details> <details class="faq-item fx-card"> <summary> <span class="faq-q-num">Q.03</span> <span class="faq-q">Что будет, если пропущу тренировку?</span> <span class="faq-toggle"></span> </summary> <p class="faq-a">Один-два пропуска за пакет — нормально, предупреди заранее, договоримся индивидуально. Если систематически пропускаешь больше — пакет считается отыгранным, продолжение по новому пакету. Это для того, чтобы группа держала темп.</p> </details> <details class="faq-item fx-card"> <summary> <span class="faq-q-num">Q.04</span> <span class="faq-q">Что такое пробный урок?</span> <span class="faq-toggle"></span> </summary> <p class="faq-a">Бесплатное полноценное занятие, которое мы проводим каждый четверг в 18:00 МСК, онлайн в Discord. Час разбираем тактики, играем спарринг. После — сам решаешь, идти ли в платный пакет. Никаких обязательств. На каждый пробный 4 места — записывайся заранее.</p> </details> <details class="faq-item fx-card"> <summary> <span class="faq-q-num">Q.05</span> <span class="faq-q">Какое нужно железо?</span> <span class="faq-toggle"></span> </summary> <p class="faq-a">Компьютер, который тянет CS2 без фризов. Микрофон и наушники — обязательно. Камера не нужна.</p> </details> </div> </div> </section> <!-- ============ 09 / КОНТАКТЫ ============ --> <section id="contacts"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 07</span><span>—</span><span>контакты</span><span class="caret"></span></div> <h2 class="h2 fx-text">Связаться<br>с нами</h2> <div class="contacts"> <div class="contact-cell cobalt fx-slide-left" style="grid-column:1/-1"> <span class="tag">// telegram / Владимир</span> <a class="value" href="https://t.me/+79992160060" target="_blank" rel="noopener noreferrer">+7 999 216-00-60</a> </div> </div> </div> </section> <!-- ============ 10 / ЗАЯВКА (форма) ============ --> <section id="apply"> <div class="container"> <div class="sec-tag mono fx-text"><span class="num">/ 08</span><span>—</span><span>заявка</span><span class="caret"></span></div> <h2 class="h2 fx-text">Записаться<br>на пробный урок</h2> <p class="lead apply-intro fx-text">Бесплатное занятие по четвергам в 18:00 МСК. Жмёшь «Записаться» — Владимир подтверждает место в Telegram в течение двух дней.</p> <div class="apply-form-wrap" id="apply-wrap"> <!--
+          ВАЖНО: action указывает на FormSubmit.co с email vlagunko@gmail.com.
+          После первой отправки на этот email придёт письмо-подтверждение —
+          активируй его один раз, дальше все заявки пойдут на почту молча.
+        --> <form class="apply-form" id="apply-form" novalidate> <!-- honeypot — невидимое поле, заполняемое только ботами --> <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off"> <div class="form-field fx-card"> <label for="f-name">Имя</label> <input id="f-name" type="text" name="name" placeholder="Как тебя зовут" autocomplete="name" required> <span class="err">// заполни поле</span> </div> <div class="form-field fx-card"> <label for="f-age">Возраст</label> <input id="f-age" type="text" name="age" placeholder="Например: 22" required> <span class="hint">// от 16</span> <span class="err">// заполни поле</span> </div> <div class="form-field fx-card"> <label for="f-faceit">Ссылка на FACEIT</label> <input id="f-faceit" type="text" name="faceit" placeholder="https://www.faceit.com/en/players/..." required> <span class="hint">// нужна для оценки уровня</span> <span class="err">// заполни поле</span> </div> <div class="form-field fx-card"> <label for="f-telegram">Telegram</label> <input id="f-telegram" type="text" name="telegram" placeholder="@username или https://t.me/..." required> <span class="hint accent">// основной способ связи между играми</span> <span class="err">// заполни поле</span> </div> <div class="form-field fx-card"> <label for="f-discord">Discord</label> <input id="f-discord" type="text" name="discord" placeholder="username или ссылка-инвайт" required> <span class="hint accent">// основной способ связи во время игр</span> <span class="err">// заполни поле</span> </div> <div class="form-field fx-card"> <label for="f-location">Город и страна</label> <input id="f-location" type="text" name="location" placeholder="Например: Рига, Латвия" required> <span class="err">// заполни поле</span> </div> </form> <div class="apply-actions fx-text"> <button type="submit" form="apply-form" class="btn btn-primary" id="apply-submit">Записаться на пробный урок <span class="arrow">→</span></button> <span class="form-status" id="form-status"></span> </div> <div class="apply-foot fx-text">
+          // ответим в Telegram в течение 2 дней — <a href="https://t.me/+79992160060" target="_blank" rel="noopener noreferrer">+7 999 216-00-60</a><br>
+          // не хочешь форму — напиши Владимиру в <a href="https://t.me/+79992160060" target="_blank" rel="noopener noreferrer">Telegram</a> напрямую
+        </div> <!-- экран "спасибо" — показывается после успешной отправки --> <div class="thank-you" role="status" aria-live="polite"> <div class="ty-status">// status: sent</div> <h3>Заявка ушла</h3> <p>Дальше — ближайший пробный урок в четверг, 18:00 МСК. Подробнее — в разделе <a href="#trial" style="color:var(--orange)">«Пробный урок»</a>.</p> <p>Владимир напишет тебе в Telegram в течение двух дней.</p> <ol> <li>Получаешь сообщение от Владимира в Telegram с подтверждением места.</li> <li>Получаешь ссылку на Discord-канал, где пройдёт пробный урок.</li> <li>В четверг в 18:00 МСК приходишь и играешь час вместе с группой.</li> </ol> </div> </div> <div class="info-grid"> <div class="info-block fx-card"> <strong>// расписание</strong>
+          пн / ср / пт<br>
+          18:00 по Москве<br>
+          онлайн / Discord
+        </div> <div class="info-block fx-card"> <strong>// формат</strong>
+          пробный — чт 18:00<br>
+          любой уровень FACEIT / Premier<br>
+          возраст 16–30
+        </div> <div class="info-block fx-card"> <strong>// контакт / Владимир</strong>
+          telegram: <a href="https://t.me/+79992160060" target="_blank" rel="noopener noreferrer">+7 999 216-00-60</a> </div> </div> </div> </section> </main> <footer> <div class="container"> <div class="footer-grid"> <div class="foot-block"> <h4>// навигация</h4> <a href="#how">Как устроено</a> <a href="#manifest">Манифест</a> <a href="#geo">Откуда играем</a> <a href="#trial">Пробный урок</a> <a href="#faq">FAQ</a> <a href="#apply">Записаться</a> </div> </div> <div class="foot-meta"> <span>// ROSTER / школа CS2 / 2026</span> <span>сделано в <a class="credit" href="https://posuti.me" target="_blank" rel="noopener noreferrer">Сути Медиа</a></span> </div> </div> </footer> <script>
+(function(){
+  // ============ IntersectionObserver: одна точка для .reveal и .fx-* ============
+  var FX_SELECTOR = '.reveal, .fx-text, .fx-card, .fx-slide-left, .fx-slide-right, .fx-grow-x';
+  var STAGGER_PARENTS = ['fx-card-stagger', 'fx-text-stagger'];
+
+  // Прокинуть transition-delay в детей stagger-родителя ДО первого появления
+  STAGGER_PARENTS.forEach(function(cls){
+    document.querySelectorAll('.' + cls).forEach(function(parent){
+      var idx = 0;
+      Array.prototype.slice.call(parent.children).forEach(function(child){
+        if (child.matches(FX_SELECTOR)) {
+          child.style.transitionDelay = (idx * 70) + 'ms';
+          idx++;
+        }
+      });
+    });
+  });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(FX_SELECTOR).forEach(function(el){ io.observe(el); });
+
+  // ============ Hero-фото: лёгкий параллакс всей рамки за курсором ============
+  var heroPhoto = document.getElementById('hero-photo');
+  if (heroPhoto && window.matchMedia('(hover:hover)').matches) {
+    var targetRot = 0, targetTy = 0, curRot = 0, curTy = 0;
+    function loop(){
+      curRot += (targetRot - curRot) * 0.10;
+      curTy += (targetTy - curTy) * 0.10;
+      heroPhoto.style.transform = 'rotate(' + curRot.toFixed(2) + 'deg) translateY(' + curTy.toFixed(2) + 'px)';
+      requestAnimationFrame(loop);
+    }
+    loop();
+    window.addEventListener('mousemove', function(ev){
+      var r = heroPhoto.getBoundingClientRect();
+      var cx = r.left + r.width/2, cy = r.top + r.height/2;
+      var dx = (ev.clientX - cx) / Math.max(window.innerWidth, 1);
+      var dy = (ev.clientY - cy) / Math.max(window.innerHeight, 1);
+      targetRot = Math.max(-2, Math.min(2, dx*5));
+      targetTy  = Math.max(-4, Math.min(4, dy*8));
+    });
+  }
+
+  // ============ FAQ accordion: одна открытая за раз ============
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if (item.open) {
+        document.querySelectorAll('.faq-item').forEach(function(other){
+          if (other !== item) other.open = false;
+        });
+      }
+    });
+  });
+
+  // ============ Форма: отправка заявки в Telegram + Google Sheets CRM ============
+  // НАСТРОЙКА:
+  var TG_BOT_TOKEN = '8806883529:AAECZNxTdw8M9DDwOJeVisnLT0Q96XTrzsQ';
+  var TG_CHAT_ID   = '315977362';
+  // Google Apps Script Web App — пишет заявку в таблицу ROSTER / Заявки
+  var CRM_URL      = 'https://script.google.com/macros/s/AKfycbxa3jMg2zJReEt0KGFH2CVRERtf0cJ0Mkqutd2GHkhfbYO15EvWMXpj6tIxSJglm2w/exec';
+
+  var form = document.getElementById('apply-form');
+  var wrap = document.getElementById('apply-wrap');
+  var statusEl = document.getElementById('form-status');
+  var submitBtn = document.getElementById('apply-submit');
+
+  function setStatus(html, isError){
+    statusEl.innerHTML = html || '';
+    statusEl.classList.toggle('is-error', !!isError);
+  }
+
+  function escapeHtml(s){
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  function buildTelegramMessage(payload){
+    var lines = [
+      '<b>Новая заявка / ROSTER</b>',
+      '<i>Тип: пробный урок</i>',
+      '',
+      '<b>Имя:</b> '      + escapeHtml(payload.name     || '—'),
+      '<b>Возраст:</b> '  + escapeHtml(payload.age      || '—'),
+      '<b>FACEIT:</b> '   + escapeHtml(payload.faceit   || '—'),
+      '<b>Telegram:</b> ' + escapeHtml(payload.telegram || '—'),
+      '<b>Discord:</b> '  + escapeHtml(payload.discord  || '—'),
+      '<b>Откуда:</b> '   + escapeHtml(payload.location || '—')
+    ];
+    return lines.join('\n');
+  }
+
+  if (form) {
+    // снимаем подсветку ошибки при вводе
+    form.querySelectorAll('input[required]').forEach(function(input){
+      input.addEventListener('input', function(){
+        var field = input.closest('.form-field');
+        if (field) field.classList.remove('has-error');
+      });
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      // honeypot — если бот заполнил скрытое поле, тихо ничего не делаем
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) return;
+
+      // Проверка обязательности — все поля должны быть непустыми (без масок).
+      var emptyCount = 0;
+      var firstEmpty = null;
+      form.querySelectorAll('input[required]').forEach(function(input){
+        var field = input.closest('.form-field');
+        if (!input.value.trim()) {
+          emptyCount++;
+          if (field) field.classList.add('has-error');
+          if (!firstEmpty) firstEmpty = input;
+        } else {
+          if (field) field.classList.remove('has-error');
+        }
+      });
+      if (emptyCount > 0) {
+        setStatus('// заполни все поля — осталось ' + emptyCount, true);
+        if (firstEmpty) firstEmpty.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      setStatus('// отправляем...', false);
+
+      var payload = {};
+      new FormData(form).forEach(function(v, k){ payload[k] = v; });
+
+      // Параллельно шлём заявку в Google Sheets CRM (fire-and-forget).
+      // Не блокирует Telegram-отправку. Если Sheets упадёт — логируем в консоль,
+      // юзеру ничего не показываем, заявка всё равно ушла в Telegram.
+      if (CRM_URL) {
+        fetch(CRM_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload),
+          mode: 'no-cors'
+        }).then(function(){
+          console.log('[CRM] application sent to Sheets');
+        }).catch(function(err){
+          console.error('[CRM] sheets error:', err);
+        });
+      }
+
+      var url = 'https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage';
+      var body = {
+        chat_id: TG_CHAT_ID,
+        text: buildTelegramMessage(payload),
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
+      };
+
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      }).then(function(res){
+        return res.json().then(function(data){
+          console.log('[Telegram]', res.status, data);
+          if (!res.ok || !data.ok) throw new Error('Telegram API: ' + (data.description || res.status));
+          return data;
+        });
+      }).then(function(){
+        wrap.classList.add('is-sent');
+        setStatus('');
+        var ty = wrap.querySelector('.thank-you');
+        if (ty) ty.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }).catch(function(err){
+        console.error('[Telegram] error:', err);
+        submitBtn.disabled = false;
+        setStatus('// не отправилось — попробуй ещё раз или напиши в <a href="https://t.me/+79992160060" target="_blank" rel="noopener noreferrer">Telegram</a>', true);
+      });
+    });
+  }
+
+  // ============ JS-фолбэк для якорных ссылок ============
+  // Покрывает случай Tilda-iframe и любых внешних перехватчиков клика
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + id);
+      }
+    });
+  });
+})();
+</script> <!-- nominify end -->
